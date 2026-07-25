@@ -57,13 +57,13 @@ def generate_launch_description():
     )
 
     spawn_robot = TimerAction(
-        period=5.0,  # Increased to 5 seconds to ensure the Gazebo environment finishes booting
+        period=5.0,  
         actions=[Node(
             package='ros_gz_sim',
             executable='create',
             name='patrolbot_spawner',
             arguments=[
-                "-world", "empty",  # CRITICAL: Targets your world backend name seen in the logs
+                "-world", "empty",  
                 "-topic", "/robot_description",
                 "-name", "patrolbot",
                 "-allow_renaming", "false",
