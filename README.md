@@ -23,10 +23,70 @@ be added in the future for tasks like vision based tasks and navigation.
 
 ## 📦 Repository Structure
 
-This repository exposes your packages side-by-side at the root layer for seamless integration:
 * **`patrolbot_description/`**: Holds your primary `.xacro` unified robot descriptions, geometric link meshes (`.stl`), parameter configurations, and primary simulation launch scripts.
-* **`patrolbot_nav2_bt/`**: Contains customized XML navigation behavior trees mapped out with structured path recovery and adaptive replanning sub-nodes. Includes the progress checker and goal checker to the tree under FollowPath so it uses the goal checker and progress checker defined in  nav2 parms.yaml
+* **`patrolbot_nav2_bt/`**: Contains customized XML navigation behavior trees mapped out with structured path recovery and adaptive replanning sub-nodes. Includes the progress checker and goal checker to the tree under `FollowPath` so it uses the goal checker and progress checker defined in `nav2_params.yaml`.
 
+```text
+
+├── patrolbot_description
+│   ├── config
+│   │   ├── amcl_params.yaml
+│   │   ├── nav2_params.yaml
+│   │   ├── ros_gz_bridge_gazebo.yaml
+│   │   └── slam_toolbox_async.yaml
+│   ├── launch
+│   │   ├── amcl.launch.py
+│   │   ├── display.launch.py
+│   │   ├── gazebo.launch.py
+│   │   ├── nav2.launch.py
+│   │   └── slam.launch.py
+│   ├── maps
+│   │   ├── patrolbot_map.pgm
+│   │   └── patrolbot_map.yaml
+│   ├── meshes
+│   │   ├── base_link.stl
+│   │   ├── left_wheel_1.stl
+│   │   ├── lidar_1.stl
+│   │   └── right_wheel_1.stl
+│   ├── package.xml
+│   ├── patrolbot_description
+│   │   └── __init__.py
+│   ├── resource
+│   │   └── patrolbot_description
+│   ├── rviz
+│   │   ├── display.rviz
+│   │   ├── gazebo.rviz
+│   │   ├── nav2.rviz
+│   │   └── slam.rviz
+│   ├── setup.cfg
+│   ├── setup.py
+│   ├── test
+│   │   ├── test_copyright.py
+│   │   ├── test_flake8.py
+│   │   └── test_pep257.py
+│   ├── urdf
+│   │   ├── materials.xacro
+│   │   ├── patrolbot.gazebo
+│   │   ├── patrolbot.ros2control
+│   │   └── patrolbot.xacro
+│   └── worlds
+│       └── obstacles.sdf
+└── patrolbot_nav2_bt
+    ├── behaviour_trees
+    │   ├── navigate_through_poses_w_replanning_and_recovery.xml
+    │   └── navigate_to_pose_w_replanning_and_recovery.xml
+    ├── package.xml
+    ├── patrolbot_nav2_bt
+    │   └── __init__.py
+    ├── resource
+    │   └── patrolbot_nav2_bt
+    ├── setup.cfg
+    ├── setup.py
+    └── test
+        ├── test_copyright.py
+        ├── test_flake8.py
+        └── test_pep257.py
+```
 ---
 
 ## 🚀 Execution & Deployment Guide (Multi-Terminal Bringup)
