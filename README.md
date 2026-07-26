@@ -23,7 +23,7 @@ be added in the future for tasks like vision based tasks and navigation.
 
 ## 📦 Repository Structure
 
-* **`patrolbot_description/`**: Holds your primary `.xacro` unified robot descriptions, geometric link meshes (`.stl`), parameter configurations, and primary simulation launch scripts.
+* **`patrolbot_description/`**: Holds the primary `.xacro` unified robot descriptions, geometric link meshes (`.stl`), parameter configurations, and primary simulation launch scripts.
 * **`patrolbot_nav2_bt/`**: Contains customized XML navigation behavior trees mapped out with structured path recovery and adaptive replanning sub-nodes. Includes the progress checker and goal checker to the tree under `FollowPath` so it uses the goal checker and progress checker defined in `nav2_params.yaml`.
 
 ```text
