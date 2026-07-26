@@ -16,7 +16,7 @@ A comprehensive ROS 2 Jazzy and Gazebo Harmonic simulation workspace featuring a
 
 ### Short Description
 **PatrolBot** is an agile, multi-wheeled differential-drive autonomous mobile robot framework designed for mapping and autonomous navigation . It consists of only lidar as of now and further sensors will
-be added in the future for tasks like vision based tasks and navigation.
+be added in the future for tasks like vision based tasks and navigation. PatrolBot was designed in Fusion 360 and exported via Fusion 360 URDF exporter plugin
 
 
 ---
